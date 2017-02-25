@@ -1,0 +1,28 @@
+<ion-header>
+</ion-header>
+<ion-content>
+    <ion-toolbar color="primary">
+    <ion-buttons left>
+      <img src="http://www.westernbulldogs.com.au/static-resources/themes/bulldogs/images/logo-bulldogs.png" padding>
+    </ion-buttons>
+    <ion-title>Position Visualisation</ion-title>
+  </ion-toolbar>
+  <ion-grid padding>
+    <ion-row align-items-center justify-content-center>
+      <ion-col text-center>
+        <video #footage controls (timeupdate)="displayPlay($event)" (playing)="startVisualisationPlayer()" (pause)="pauseVisualisationPlayer()" (seeked)="seek($event)">
+          <source id="footage" src="http://westisbest.s3-website-ap-southeast-2.amazonaws.com/assets/MatchSim15v15_480.mp4" type="video/mp4">
+        </video>
+      </ion-col>
+      <ion-col text-center>
+        <video #visualisation>
+          <source id="footage" src="http://westisbest.s3-website-ap-southeast-2.amazonaws.com/assets/output.mp4" type="video/mp4">
+        </video>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-list inset>
+    <ion-item>
+    </ion-item>
+  </ion-list>
+</ion-content>

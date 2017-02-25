@@ -1,28 +1,91 @@
-<!doctype html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Video</title>
     <base href="/">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
-        <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
-        <script type="text/javascript" src="http://d3js.org/d3.hexbin.v0.min.js"></script>
+          crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>Self Organizing Maps</title>
+
+    <script type="text/javascript" src="http://d3js.org/d3.v3.js"></script>
+    <script type="text/javascript" src="http://d3js.org/d3.hexbin.v0.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.js"></script>
+
+    <style type="text/css">
+        body {
+            margin: 0px;
+
+            font-family: "Helvetica Neue", Helvetica;
+            font-size: 14px;
+        }
+
+        .header {
+            margin-top: 20px;
+            margin-left: 20px;
+            font-size: 36px;
+            font-weight: 300;
+            display: block;
+            z-index: 1;
+            text-shadow: 0 1px 0 #fff;
+        }
+        .hint {
+            width: 1280px;
+            right: 0px;
+            color: rgb(153, 153, 153);
+            font-size: 12px;
+            padding-bottom: 20px;
+        }
+
+        #chart{
+            text-align: center;
+            position: relative;
+            top: 500px;
+            background-image: url("assets/field_background.png");
+            background-size: 80%;
+            background-repeat: no-repeat;
+            background-position: 57% 56%
+
+
+        }
+        .oval{
+
+
+        }
+
+        .hr-style {
+            border: 0;
+            height: 2px;
+            width: 80%;
+            color: #E8E8E8;
+
+        }
+    </style>
 </head>
-
 <body>
-    <div class="container">
-        <video controls autoplay preload="auto" width=960>
-            <source src="./assets/MatchSim15v15.mp4" type="video/mp4">
-        </video>
-        <div class="panel panel-default" id="chart">
-            <img src="assets/field_background.png" />
-        </div>
-    </div>
-</body>
 
+
+
+<div class="header">
+    Self Organizing Maps
+    <div class="hint">Heatmaps showing distributions per variable</div>
+</div>
+
+
+<div class="container">
+    <!--<video controls autoplay preload="auto" width=960>
+        <source src="./assets/MatchSim15v15.mp4" type="video/mp4">
+    </video>-->
+    <div id="chart"></div>
+    <div   class="oval" style="height:650px;">
+
+    </div></div>
+sdsds
+
+<script type="text/javascript" src="static/js/hex.js"></script>
+
+
+
+</body>
 </html>
